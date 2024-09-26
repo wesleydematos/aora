@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <View className="flex-1 items-center justify-center bg-white">
       <Text className="text-3xl font-pblack">Aora!</Text>
-      <Link href="/profile" style={{ color: "blue" }}>
-        Go to profile!
+      <Link href="/home" className="mt-28 text-blue-500">
+        Go to home!
       </Link>
       <StatusBar style="inverted" />
     </View>
