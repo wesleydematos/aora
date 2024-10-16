@@ -1,12 +1,15 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+import { images } from "../../constants";
+import SearchInput from "../../components/SearchInput";
 
 const Home = () => {
   return (
     <SafeAreaView className="bg-primary">
       <FlatList
         data={[{ id: 1 }, { id: 2 }, { id: 3 }]}
-        keyExtractor={(item) => item.$id}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Text className="text-3xl text-white">{item.id}</Text>
         )}
@@ -21,6 +24,22 @@ const Home = () => {
                   Lara Silva
                 </Text>
               </View>
+
+              <View className="mt-1.5">
+                <Image
+                  source={images.logoSmall}
+                  className="w-9 h-10"
+                  resizeMode="contain"
+                />
+              </View>
+            </View>
+
+            <SearchInput />
+
+            <View className="w-full flex-1 pt-5 pb-8">
+              <Text className="text-lg font-pregular text-gray-100 mb-3">
+                Latest Videos
+              </Text>
             </View>
           </View>
         )}
