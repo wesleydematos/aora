@@ -4,6 +4,7 @@ import Trending from "./Trending";
 import SearchInput from "./SearchInput";
 import EmptyState from "./EmptyState";
 import VideoCard from "./VideoCard";
+import InfoBox from "./InfoBox";
 
 export {
   FormField,
@@ -12,4 +13,5 @@ export {
   SearchInput,
   EmptyState,
   VideoCard,
+  InfoBox,
 };
